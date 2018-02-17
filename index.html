@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="https://unpkg.com/vue"></script>
+    <link rel="stylesheet" href="./css/index.css">
+  </head>
+  <body>
+    <div id="app">
+      <p>{{ message }}</p>
+    </div>
+
+    <div id="todoApp">
+      <h2 v-bind:style="fontStyle">{{ title }}</h2>
+      <input type="text" v-model="todo" v-on:keyup.enter="addTodo() + hoge()">
+      <!-- propsにtodos -->
+      <todolist v-bind:todos="todos"/>
+    </div>
+
+    <!-- JavaScript  -->
+    <script type="text/javascript" src="./js/index.js"></script>
+  </body>
+</html>
